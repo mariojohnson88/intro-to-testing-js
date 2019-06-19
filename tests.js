@@ -39,7 +39,14 @@ describe('sayHello', function() {
     });
 });
 
-
+describe('isFive', function() {
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should ensure that isFive returns a boolean no matter what the input', function () {
+        expect(typeof isFive).toBeTruthy();
+    });
+});
 
 
 
