@@ -20,12 +20,36 @@ describe('sayHello', function() {
         expect(typeof sayHello).toBe('function');
     });
     it('should return a string when called', function() {
-        expect(typeof sayHello).toBe("string");
+        expect(typeof sayHello()).toBe("string");
     });
-    it('should return a string when executed', function() {
-        expect(sayHello()).toBe("");
+    it('should return "Hello, Jane!" when executed', function() {
+        expect(sayHello("Jane")).toBe('Hello, Jane!');
     });
-    it("should never return 'undefined' when called", function() {
-        expect(sayHello()).not.toBe(undefined);
+    it('should return "Hello, Alex!" when executed', function() {
+        expect(sayHello("Alex")).toBe('Hello, Alex');
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+// describe("add",function() {
+//     it('should be defined function', function() {
+//         expect(typeof add).toBe('function');
+//     });
+//     it('should return 5 when adding 3 and 2.', function() {
+//         expect(add(3,2)).toBe(5);
+//     });
+//     it('should return false when adding 2 strings', function() {
+//         expect(add("black", "bird")).toBe(false);
+//     })
+// });
